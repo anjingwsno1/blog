@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import {
     HeaderWrapper,
     Logo,
@@ -10,6 +11,15 @@ import {
     SearchWrapper
 } from './style';
 class Header extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            focused: false
+        }
+        this.handleInputFocus = this.handleInputFocus.bind(this);
+        this.handleInputBlur = this.handleInputBlur.bind(this);
+    }
     render() {
         return (
             <HeaderWrapper>
@@ -19,22 +29,44 @@ class Header extends Component {
                     <NavItem className='left'>download</NavItem>
                     <NavItem className='right'>login</NavItem>
                     <NavItem className='right'>
-                        <i calssName='iconfont'>&#xe636;</i>
+                        <i className='iconfont'>&#xe636;</i>
                     </NavItem>
                     <SearchWrapper>
-                        <NavSearch></NavSearch>
-                        <i calssName='iconfont'>&#xe624;</i>
+                        <CSSTransition
+                            in={this.state.focused}
+                            timeout={200}
+                            classNames="slide"
+                        >
+                            <NavSearch
+                                className={this.state.focused ? 'focused':''}
+                                onFocus={this.handleInputFocus}
+                                onBlur={this.handleInputBlur}
+                            ></NavSearch>
+                        </CSSTransition>
+                        <i className={this.state.focused ? 'focused iconfont':'iconfont'}>&#xe624;</i>
                     </SearchWrapper>
                 </Nav>
                 <Addition>
                 <Button className='write'>
-                    <i calssName='iconfont'>&#xe65d;</i>
+                    <i className='iconfont'>&#xe65d;</i>
                     Write a blog
                 </Button>
                 <Button className='reg'>Register</Button>
                 </Addition>
             </HeaderWrapper>
         )
+    }
+
+    handleInputFocus() {
+        this.setState({
+            focused: true
+        })
+    }
+
+    handleInputBlur() {
+        this.setState({
+            focused: false
+        })
     }
 }
 
