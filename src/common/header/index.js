@@ -10,9 +10,35 @@ import {
     NavSearch,
     Addition,
     Button,
+    SearchInfo,
+    SearchInfoTitle,
+    SearchInfoSwitch,
+    SearchInfoItem,
+    SearchInfoList,
     SearchWrapper
 } from './style';
-import { bindActionCreators } from 'redux';
+
+const getListArea = (show) => {
+    if(show) {
+        return(
+            <SearchInfo>
+                <SearchInfoTitle>
+                    Popular Search
+                    <SearchInfoSwitch>Change</SearchInfoSwitch>
+                </SearchInfoTitle>
+                <SearchInfoList>
+                    <SearchInfoItem>education</SearchInfoItem>
+                    <SearchInfoItem>education</SearchInfoItem>
+                    <SearchInfoItem>education</SearchInfoItem>
+                    <SearchInfoItem>education</SearchInfoItem>
+                    <SearchInfoItem>education</SearchInfoItem>
+                </SearchInfoList>
+            </SearchInfo>
+        )
+    } else {
+        return null;
+    }
+}
 
 const Header = (props) => {
     return (
@@ -38,6 +64,7 @@ const Header = (props) => {
                         ></NavSearch>
                     </CSSTransition>
                     <i className={props.focused ? 'focused iconfont':'iconfont'}>&#xe624;</i>
+                    {getListArea(props.focused)}
                 </SearchWrapper>
             </Nav>
             <Addition>
@@ -54,7 +81,7 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        focused: state.header.get('focused')
+        focused: state.getIn(['header','focused'])
     }
 }
 
