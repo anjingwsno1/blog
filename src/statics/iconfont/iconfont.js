@@ -1,14 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalIconStyled = createGlobalStyle `
-  @font-face {font-family: "iconfont";
-    src: url('./iconfont.eot?t=1560062423411'); /* IE9 */
-    src: url('./iconfont.eot?t=1560062423411#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPkAAsAAAAACAgAAAOWAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDSIMfATYCJAMQCwoABCAFhG0HRBsNB8iemjwhBBZQYIEEEuApFg/0+307V97zVU0udReZLtZVSmNIEBteAqF4ZPr/+zbtRQzWhZoLpGIk+VAaHfi1W7JiOe/60dQiq3JyaYAAM/O19f/HvdM/yjoP57Msl7G2jjHoUxdgvDWgMYa1wTsvkNwzaRi7oCUeJqC1LJrsaml1M2hl5qiA8ELgWdBmDHJDelALyoqFWfgAKnV8J78K4H3w+fAPEtMSFYk58dpKTJD/4NedCud/pw7PBOums4EtI2EHyIQnlY57FFFgh0Krdlc6A2q1yFQtqa87/0eioyhqy0kc/OOFkpnagxMYTPwMdthEfqYKqpSdUPQAB2VQo8NbAN/BpCz6H4Uo931b1LNjtNop0ux52ex9Rfvf6H2vh3w+xu/Xe720x9O9eUm4CcjHW1wmQnaXbspm8pa7jzmNbn8WvdS93DWJ8fuY474lnmyPkz7mbdvid3sjbjnrN3qW+CJvu0YTd0Y0E2aytW3ZLGLNlBb2COkGaEP7iVhyXebS613BRtn03o3g3ES6z8hkg99ns6rI3yyux3MlSXZ/03VI8f278hDmYu2hBBXfMBfdUy0uK1gQEoKl0NDe/DJUV/f8eW3tlsU1tYv/xUK0jS+iG2aO8PvpMVfGHKdDVpX6YFFpYEuw0aYGllad5eGorgUPK2Y1wsDV42uPX42Qh68KJ7myW+HFt9Co/4Yrvr7cOlpeaBBy/crfuRI+lx4nU12KtUcwwshOsio/82WXHl+ZOvH3tJCPIbPAATCQbsr/AtIV+U2AwXRS8U+/4/+sW4+7R2d/1ZIZ/Ai87A+KBjIk/BhhZ+EfFHYsyZrYNOasSByBflJ2QAUiWi3+W4Rxj6dwTYHEFtRcCCGqLEFSW0EzeQcKnRMo1c6hta1seWeCSCHkBlvmAwhG7YBo2EdIRl1DM/kRFKa9hdJoCmjdafyGnbUEokhELEYmyjBMCUa7jbPNmAjTGxHfb2HFtDigMUiUBDeVEBufD5chGxKnmCIN8IkYcxQn2q1UKTgOWSx2yiHa+5ARx/Zi7MiMi+OqnhRrtFuBcIUIYWGICcVgGEVgZGfDeZUxovD+RgivnwVLbCBUORmISCK0T0kQK74DWqawdSLcyjmSAbxEGMahcER2VpRSYEMsVsCO4qju1wcxwmL1DvA5ZIpD5biuitjlVdY3XAUt8xE5xJBCDoX0hrWNtrK8TeCGBRvPW1hJkhewAAAA') format('woff2'),
-    url('./iconfont.woff?t=1560062423411') format('woff'),
-    url('./iconfont.ttf?t=1560062423411') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-    url('./iconfont.svg?t=1560062423411#iconfont') format('svg'); /* iOS 4.1- */
-  }
+    @font-face {font-family: "iconfont";
+    src: url('./iconfont.eot?t=1560759193516'); /* IE9 */
+    src: url('./iconfont.eot?t=1560759193516#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQwAAsAAAAACJwAAAPkAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqEOIN/ATYCJAMUCwwABCAFhG0HSxuOB8gehXEbHVJqVFb2d8RHUO332bPw7t0egQKF6DHlgYQjFCoWyNgYxcZEGLbxf6pNW6QG50LNBVKxCFAaHaD2uqRi9zbVlyhyJlJb/38c7rV5noXzWZbLXIuKBmAcUEB7nw+Qtg+Qvij/Yewm8iD3E2iWBIEu5RRVAVcFGBaIhxyrBa4JlVKBC720K5hbxAfgpE8v4QsAeO99P/6BiHAlqRkYe/l2tgGk/fR6UY7Y/9vVUw1YN5wByiIytgGFeF5oeggJQtsQzfo71Cmg6SXpp9ezmGcNL8r/x+ZtSNLgPzyyIiSiAzJHwakQLvz0wlQyP2NYReIGnkrwuzws4bqW0DCGjwA4dPUCcG1VkpTR0Vb7qbFTxri6zuFG6UmV/JRUn2uUZ52KQqmqRpZJSWraPOxnAPidLQ4DBt0iK5Oo1AVzj9k7qo7JQJKqoCoSqud0KBQVT7LL5Zrjin5JQP9aTSTnzV3gmESpCnVcGZaSJDt5TK7dos6V/a/ayzZKw0rANcdo7OaIKsyI19TOn4UtnVKtPYLPBaBF+4wNX4IcGo3DWyuJ3LsR2Dfhc89A0OD3WdSplu+QThmEF+WPXnMcQr5/Rw+JdFF+COFF30S6cGxnfn56v7e3KPj4tKTl0qWljx6VlGwZKi4Z+hcCgvw+WlNzN1RIhwf27h2A0+aAt9KOoX/+oMfqMlf97k7U/m/UGWx8HFQ+c4SqkmPOjzmqNomFzgczczyqvfQI75FTeJYRxTX238mfVcGHLhxfe/xCgLjzquAkk3vVL+sqPeq/LlNpTSkl4Qwdl6Kiv1ME8VxcKOR0FmL1p7iRDXhhWsKTRo14furE39O8P3rPAtUABpAr8F+AfAFfAWAwn0R+h9/4j+/zbRqd9NUVL+BHsGmRVzKAgvwCgHcq1pj98tkNq4rNBepazHLMMi3V/m0TJau6WTGm3RtGMtc4k9CbiyAZsghZbxlZsNtQjTiGTu8Emi25i0fM4CGiDGNTHwdh0g5Ixn2CbNJFZMHehWreW+hMBgLNzRi/5ojV4LBMntaKtIHQdRGc3mphkFbE/OwKmm0zafk41yNQNC9wXiI8JCwdzaUtND/EBKGdjRBFhmB4q5nI4Q6jTSYrYeOtrbReDGkRRVtCaChTdKYQvdUMMBd4NC0RzYCg04XA0bOyYGhjEZb5fAUaq42JFl9R0aKl0HgCrnVCuBBhDZC5IkujikvpLGjHiiASMeIgBs/KjJDDG2gmGLIi2Ip7taLpiUK0dAjYJAgV6jFNRSHTS8z3uAkacMIaKXKUqNHJT7UWVLBxltFmLWvhmC7OwrImrSDA6VoAAA==') format('woff2'),
+    url('./iconfont.woff?t=1560759193516') format('woff'),
+    url('./iconfont.ttf?t=1560759193516') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('./iconfont.svg?t=1560759193516#iconfont') format('svg'); /* iOS 4.1- */
+    }
 
   .iconfont {
     font-family: "iconfont" !important;
@@ -18,5 +18,4 @@ export const GlobalIconStyled = createGlobalStyle `
     -moz-osx-font-smoothing: grayscale;
   }
 `
-
 
