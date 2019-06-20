@@ -12,6 +12,7 @@ class Topic extends Component {
                             <img 
                                 className='topic-pic'
                                 src={item.get('imgUrl')}
+                                alt=''
                             />
                             {item.get('title')}
                         </TopicItem>
@@ -24,7 +25,7 @@ class Topic extends Component {
 }
 
 const mapState = (state) => ({
-    list: state.get('home').get('topicList')
+    list: state.getIn(['home', 'topicList'])
 })
 
 export default connect(mapState, null)(Topic);
