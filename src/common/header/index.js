@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
 import {
@@ -62,7 +63,9 @@ class Header extends Component {
         const { focused, handleInputFocus, handleInputBlur, list } = this.props;
         return (
             <HeaderWrapper>
-                <Logo />
+                <Link to='/'>
+                    <Logo />
+                </Link>
                 <Nav>
                     <NavItem className='left active'>Home</NavItem>
                     <NavItem className='left'>download</NavItem>
