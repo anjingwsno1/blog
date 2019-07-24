@@ -31,11 +31,10 @@ export const changePage = (page) => ({
 
 export const getList= () => {
     return (dispatch) => {
-        axios.get('/api/headerList.json').then((res) => {
-            const data = res.data;
-            dispatch(changeList(data.data))
-        }).catch(() => {
-            console.log('error');
-        })
+        const data = {
+            "success": true,
+            "data": ["education","sport","music","frm","cfa", "Facebook", "Youtube", "Google", "Gmail", "Hotmail", "amazon", "translator", "SEO", "yahoo", "ebay", "weather", "netflix", "target", "instagram", "msn"]
+        }
+        dispatch(changeList(data.data))
     }
 }
