@@ -12,19 +12,18 @@ class List extends PureComponent {
                 {
                     list.map((item, index) => {
                         return (
-                            <Link key={index} to={'/detail/'+item.get('id')}>
+                            <Link key={index} to={'/detail/'+index}>
                             <ListItem >
-                                <img alt='' className='pic' src={item.get('imgUrl')} />
+                                <img alt='' className='pic' src={item.get('urlToImage')} />
                                 <ListInfo>
                                     <h3 className='title'>{item.get('title')}</h3>
-                                    <p className='desc'>{item.get('desc')}</p>
+                                    <p className='desc'>{item.get('description')}</p>
                                 </ListInfo>
                             </ListItem>
                             </Link>
                         );
                     })
                 }
-                <LoadMore onClick={() => getMoreList(page)}>loadmore</LoadMore>
             </div>
         )
     }

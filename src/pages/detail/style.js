@@ -13,6 +13,18 @@ export const Header = styled.div`
     font-size: 34px;
     color: #333;
     font-weight: bold;
+    p {
+        font-size: 20px;
+        font-weight: normal;
+    }
+`;
+
+export const Author = styled.div`
+    float: right;
+    margin: 10px 0 20px 0;
+    line-height: 22px;
+    font-size: 20px;
+    color: #333;
 `;
 
 export const Content = styled.div`

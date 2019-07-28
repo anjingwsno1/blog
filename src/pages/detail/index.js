@@ -1,14 +1,18 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { DetailWrapper, Header, Content } from './style';
+import { DetailWrapper, Header, Content, Author } from './style';
 import { actionCreators } from './store';
 class Detail extends PureComponent {
     render() {
+        const { article } =this.props;
         return (
             <DetailWrapper>
-                <Header>{this.props.title}</Header>
-                <Content dangerouslySetInnerHTML={{__html: this.props.content}} />
+                <Header>{article.title}</Header>
+                <Author>{article.author}</Author>
+                <Header><p>Write{article.description}</p></Header>
+                <Content><img alt='' className='pic' src={article.urlToImage} /></Content>
+                <Content dangerouslySetInnerHTML={{__html: article.content}} />
             </DetailWrapper>
         )
     }
@@ -18,8 +22,7 @@ class Detail extends PureComponent {
 }
 
 const mapState = (state) => ({
-    title: state.getIn(['detail', 'title']),
-    content: state.getIn(['detail', 'content'])
+    article: state.getIn(['detail', 'article'])
 })
 
 const mapDispatch = (dispatch) => ({
